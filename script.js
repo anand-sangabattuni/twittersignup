@@ -10,13 +10,13 @@ form.addEventListener('submit', (event) => {
 
 	if (name === '' || email === '' || password === '') {
 		errorMessage.innerText = 'Please fill in all fields';
-	} else if (password.length < 8) {
-		errorMessage.innerText = 'Password must be at least 8 characters long';
+	} else if (password.length < 6) {
+		errorMessage.innerText = 'Password must be at least 6 characters long';
 	} else {
 		// submit form data to server here
-        function myFunction() {
-            window.location.href="./land.html";  
-          }
 		console.log('Form submitted successfully');
+
+		// redirect to thank you page
+		window.location.href = 'land.html';
 	}
 });
