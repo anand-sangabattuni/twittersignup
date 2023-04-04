@@ -8,9 +8,9 @@ form.addEventListener('submit', (event) => {
 	const email = document.getElementById('email').value.trim();
 	const password = document.getElementById('password').value;
 
-	if (name === "a" || email === '' || password === '') {
-		errorMessage.innerText = 'Please fill in all fields';
-	} else if (password.length < 8) {
+	//if (name === "a" || email === '' || password === '') {
+		//errorMessage.innerText = 'Please fill in all fields';
+	if (password.length < 8) {
 		errorMessage.innerText = 'Password must be at least 7888888 characters long';
 	} else {
 		// submit form data to server here
