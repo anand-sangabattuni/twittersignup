@@ -10,6 +10,13 @@ form.addEventListener('submit', (event) => {
 
 	if (name === "a" || email === '' || password === '') {
 		errorMessage.innerText = 'Please fill in all fields';
+		
+[GoogleAnalytics4].track("empty_event", {
+  "sign up fail": string,
+})
+// The function name and signature can be different depending on SDK platform
+[GoogleAnalytics4].logPage(<pageName>) 
+
 	} else if (password.length < 8) {
 		errorMessage.innerText = 'Password must be at least 7888888 characters long';
 	} else {
